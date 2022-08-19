@@ -1,0 +1,52 @@
+# Pranjali Raval
+# TE EXTC
+# 49
+
+# Menu Driven Program for Queue
+
+print("Welcome to The Queue")
+# Initial condition foe queue
+queue=[]
+size = int(input("Enter the size of the Queue:"))
+
+while True:
+    print("\n Please Select Your Choice From Following.")
+    print("1. Insert a Element in the Queue")
+    print("2. Delete a Element in the Queue")
+    print("3. Display Elements in the Queue")
+    print("4. Exit from the Queue")
+    value = int(input("Enter your Choice:"))
+
+    # To Insert Element in the Queue
+    if value == 1:
+        # checking if  the queue is full or not
+        if len(queue) == size:
+            print("Sorry This Queue is full.")
+        else:
+            #  pushing elements into the QUEUE
+            element = input("Enter the element of your choice:")
+            queue.append(element)
+
+    # To Delete Element in the Queue
+    elif value == 2:
+        if len(queue) == 0:
+            print("This Queue is Empty")
+        else:
+            print(queue.pop())
+
+        # To display the QUEUE
+    elif value == 3:
+        # Check whether QUEUE is Empty or not
+        if len(queue) == 0:
+            print("This is your Queue")
+
+        else:
+            print(queue)
+
+            # To EXIT from the program
+    elif value == 4:
+        break
+
+        # Showing the error message if correct choice is not entered
+    else:
+        print("Sorry.You have entered wrong choice")
