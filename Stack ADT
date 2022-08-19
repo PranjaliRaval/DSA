@@ -1,0 +1,53 @@
+# Pranjali Raval
+# TE EXTC
+# 49
+
+# Menu Driven Program for Stack
+
+print("Welcome to The Stack")
+# Initial condition for Stack
+stack=[]
+
+while True:
+    print("\n Please Select Your Choice From Following.")
+    print("1. Insert a Element in the Stack")
+    print("2. Delete a Element in the Stack")
+    print("3. Display Elements in the Stack")
+    print("4. Exit from the Stack")
+
+
+    value = int(input("Enter your Choice:"))
+
+
+    #Pushing elements into the STACK
+    if value == 1:
+        print("Enter your elements into Stack ")
+        data = input()
+        stack.append(data)
+
+    #Poping one element from the STACK
+    elif value == 2:
+        # To check whether STACK is Empty or not
+        if len(stack) == 0:
+            print("This Stack is Empty")
+        else:
+            #to Poing element from the STACK
+            print('\n The element is poped out')
+            print(stack.pop())
+
+    #displaying the STACK
+    elif value == 3:
+        # Check whether STACK is Empty or not
+        if len(stack) == 0:
+            print('This STACK is empty. Nothing to Display here')
+        else:
+            print("\nThe Stack has Following Elements.")
+            print(stack)
+
+    #EXIT from the program
+    elif value == 4:
+        break
+
+    # Showing the error message if correct choice is not entered
+    else:
+        print("Sorry.You have entered wrong choice")
